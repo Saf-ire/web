@@ -1,0 +1,25 @@
+<main class="main-body h-screen w-screen overflow-hidden">
+  <nav
+    class="absolute flex h-16 w-full items-center justify-center bg-black text-white"
+  >
+    <img
+      src="../../assets/fenrir.png"
+      alt="Fenrir logo"
+      class="absolute left-0 h-full"
+    />
+    <h1 class="self-center">{{ robot().name }}</h1>
+  </nav>
+  <section class="flex h-full w-auto items-center justify-center">
+    <div
+      class="grid h-1/2 max-h-[900px] min-h-[300px] w-1/2 min-w-[300px] max-w-xl auto-cols-auto grid-flow-col items-center gap-4 rounded-lg bg-[#F3F6F5]"
+    >
+      <div class="flex h-full w-auto items-center justify-center">
+        <app-circular-chart
+          [percentage]="robot().battery"
+          label="Battery Life"
+        ></app-circular-chart>
+      </div>
+    </div>
+  </section>
+</main>
+<footer></footer>
